@@ -2,10 +2,13 @@
 
 * In This Project, I Created an Automation Suite using Java With Selenium (TestNG Framework) for <a href='https://www.legalzoom.com/'>LegalZoom Site</a>, to confirm the error message when a wrong credit card number is entered for living trust Application form in the legal zoom.
 
-### Created Test Documents, for the Testing Procedure.
-* Test Scenarios.
-* Test cases.
-* Test Result Report.
+### project files
+* Test Documents, for the Testing Procedure.
+    * Test Scenarios.
+    * Test cases.
+    * Test Result Report.
+* Workflow for LegalZoom website.
+* Source code.
 
 ### How to Setup the Environment:
 * <a href='https://docs.google.com/document/d/1r0QXGeFffB4Qrr8OxcUTBpUevC5CVmq7oq5MjoIgTwI/edit?usp=sharing'> Eclipse IDE, Java with selenium (TestNg Framework)</a>
