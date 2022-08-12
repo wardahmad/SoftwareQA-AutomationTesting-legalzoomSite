@@ -8,7 +8,7 @@
     * <a href="#Result">Test Result Report.</a>
 * <a href="#Workflow">Workflow for LegalZoom website.</a>
 * <a href="https://youtu.be/ki9yXi2Hb74">Recorded video, while Automated testing running</a>
-* <a href="beltExamTwo">Source code.</a>
+* <a href="beltExamTwo/src/beltExamTwo/Legalzoom.java">Source code.</a>
 * <a href="SeleniumLocatorsIMG">Selenium Locators</a>
 
 ### How to Setup the Environment:
