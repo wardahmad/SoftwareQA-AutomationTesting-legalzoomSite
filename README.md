@@ -9,6 +9,7 @@
 * <a href="#Workflow">Workflow for LegalZoom website.</a>
 * <a href="https://youtu.be/ki9yXi2Hb74">Recorded video, while Automated testing running</a>
 * <a href="beltExamTwo">Source code.</a>
+* <a href="SeleniumLocatorsIMG">Selenium Locators</a>
 
 ### How to Setup the Environment:
 * <a href='https://docs.google.com/document/d/1r0QXGeFffB4Qrr8OxcUTBpUevC5CVmq7oq5MjoIgTwI/edit?usp=sharing'> Eclipse IDE, Java with selenium (TestNg Framework)</a>
