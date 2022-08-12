@@ -7,8 +7,8 @@
     * <a href="https://docs.google.com/spreadsheets/d/1n9TxkJv8yHQfvUhR3RD3y_Niafmjs0XEcu7t_V8D7t8/edit?usp=sharing">Test Scenarios & Test cases.</a>
     * <a href="#Result">Test Result Report.</a>
 * <a href="#Workflow">Workflow for LegalZoom website.</a>
-* Recorded video, while Automated testing running
-* Source code.
+* <a href="https://youtu.be/ki9yXi2Hb74">Recorded video, while Automated testing running</a>
+* <a href="beltExamTwo">Source code.</a>
 
 ### How to Setup the Environment:
 * <a href='https://docs.google.com/document/d/1r0QXGeFffB4Qrr8OxcUTBpUevC5CVmq7oq5MjoIgTwI/edit?usp=sharing'> Eclipse IDE, Java with selenium (TestNg Framework)</a>
