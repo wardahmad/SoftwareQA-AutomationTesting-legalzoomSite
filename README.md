@@ -4,10 +4,10 @@
 
 ### project files
 * Test Documents, for the Testing Procedure.
-    * Test Scenarios.
-    * Test cases.
+    * Test Scenarios & Test cases.
     * Test Result Report.
-* Workflow for LegalZoom website.
+* <img src="./img/Workflow.png">Workflow for LegalZoom website.</img>
+* Recorded video, while Automated testing running
 * Source code.
 
 ### How to Setup the Environment:
