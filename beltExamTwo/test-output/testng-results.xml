@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-08-12T10:52:59 AST" name="Default suite" finished-at="2022-08-12T10:56:39 AST" duration-ms="219356">
+    <groups>
+    </groups>
+    <test started-at="2022-08-12T10:52:59 AST" name="Default test" finished-at="2022-08-12T10:56:39 AST" duration-ms="219356">
+      <class name="beltExamTwo.Legalzoom">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:52:59 AST" name="beforeSuite" finished-at="2022-08-12T10:52:59 AST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:52:59 AST" name="beforeTest" finished-at="2022-08-12T10:52:59 AST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:52:59 AST" name="beforeClass" finished-at="2022-08-12T10:52:59 AST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:52:59 AST" name="beforeMethod" finished-at="2022-08-12T10:53:08 AST" duration-ms="8685" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="test1()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:53:08 AST" name="test1" finished-at="2022-08-12T10:56:38 AST" duration-ms="210324" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:56:38 AST" name="afterMethod" finished-at="2022-08-12T10:56:39 AST" duration-ms="321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:56:39 AST" name="afterClass" finished-at="2022-08-12T10:56:39 AST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:56:39 AST" name="afterTest" finished-at="2022-08-12T10:56:39 AST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:beltExamTwo.Legalzoom@cd3fee8]" started-at="2022-08-12T10:56:39 AST" name="afterSuite" finished-at="2022-08-12T10:56:39 AST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- beltExamTwo.Legalzoom -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
