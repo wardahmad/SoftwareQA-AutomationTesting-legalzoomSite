@@ -5,7 +5,7 @@
 ### project files
 * Test Documents, for the Testing Procedure.
     * <a href="https://docs.google.com/spreadsheets/d/1n9TxkJv8yHQfvUhR3RD3y_Niafmjs0XEcu7t_V8D7t8/edit?usp=sharing">Test Scenarios & Test cases.</a>
-    * <c href="#Result">Test Result Report.</a>
+    * <a href="#Result">Test Result Report.</a>
 * <a href="#Workflow">Workflow for LegalZoom website.</a>
 * Recorded video, while Automated testing running
 * Source code.
