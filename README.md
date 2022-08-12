@@ -4,9 +4,9 @@
 
 ### project files
 * Test Documents, for the Testing Procedure.
-    * Test Scenarios & Test cases.
+    * <a href="https://docs.google.com/spreadsheets/d/1n9TxkJv8yHQfvUhR3RD3y_Niafmjs0XEcu7t_V8D7t8/edit?usp=sharing">Test Scenarios & Test cases.</a>
     * Test Result Report.
-* <img src="./img/Workflow.png">Workflow for LegalZoom website.</img>
+* Workflow for LegalZoom website.
 * Recorded video, while Automated testing running
 * Source code.
 
