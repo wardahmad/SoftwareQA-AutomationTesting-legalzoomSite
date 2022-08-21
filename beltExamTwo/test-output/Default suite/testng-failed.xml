@@ -5,7 +5,15 @@
     <classes>
       <class name="beltExamTwo.Legalzoom">
         <methods>
-          <include name="legalzoom"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="test1"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="afterTest"/>
+          <include name="afterClass"/>
+          <include name="beforeTest"/>
+          <include name="afterMethod"/>
         </methods>
       </class> <!-- beltExamTwo.Legalzoom -->
     </classes>

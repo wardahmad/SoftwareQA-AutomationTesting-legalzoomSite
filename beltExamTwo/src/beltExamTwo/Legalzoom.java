@@ -30,9 +30,29 @@ public class Legalzoom {
 	public String saveXPath = "//input[@onclick='pushEpOutboundSaleInfo();']";
 	public String meOnlySelector = "input#chkctlgrantor_selfonly_CB.checkbox";
 
-	@BeforeMethod
-	public void beforeMethod() {
-		System.out.println("Before Method");
+	@BeforeSuite
+	public void beforeSuite() {
+		System.out.println("Before Suite");
+	}
+
+	@AfterSuite
+	public void afterSuite() {
+		System.out.println("After Suite");
+	}
+
+	@BeforeTest
+	public void beforeTest() {
+		System.out.println("Before Test");
+	}
+
+	@AfterTest
+	public void afterTest() {
+		System.out.println("After Test");
+	}
+
+	@BeforeClass
+	public void beforeClass() {
+		System.out.println("Before Class");
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\white\\Desktop\\QA\\Auto\\chromedriver14\\chromedriver.exe");
 
@@ -42,10 +62,20 @@ public class Legalzoom {
 		driver.navigate().to("https://www.legalzoom.com/");
 	}
 
+	@AfterClass
+	public void afterClass() {
+		System.out.println("After Class");
+	}
+
+	@BeforeMethod
+	public void beforeMethod() {
+		System.out.println("Before Method");
+	}
+
 	@Test(priority = 0)
 	public void test1() throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-		
+
 		//// `Home` Page ////
 		WebElement personalElement = driver.findElement(By.cssSelector(personalSelector));
 		WebElement livingTrustlElement = driver.findElement(By.xpath(livingTrustXPath));
@@ -299,50 +329,64 @@ public class Legalzoom {
 
 		//// `Other estate planning options.` Page ////
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
-		driver.findElement(By.xpath("//input[@onclick='pushEpOutboundSaleInfo();']")).click();
+		driver.findElement(By.xpath(saveXPath)).click();
 
 		//// `We Recommend Our Comprehensive Package` Page ////
 		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		driver.findElement(By.xpath("//input[@onclick='guestPass_disable_modal_handler();']")).click();
 
 		//// `Choose your package` Page ////
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
 		driver.findElement(By.xpath("//input[@onclick='guestPass_disable_modal_handler();']")).click();
 
 		//// `Secure Checkout` Page ////
 		driver.findElement(By.xpath("//img[@src='/assets/images/customize-package/buttonContinue.jpg']")).click();
 
 		//// `Complete your order` Page ////
-		driver.findElement(By.id("ctl00_cphMainContent_txt_ContactInfo_FName")).sendKeys("Wardah");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_ContactInfo_LName")).sendKeys("AlMalki");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_ContactInfo_EmailAddress"))
-				.sendKeys("whitelight43@hotmail.com");
-		String jScript = "document.querySelector(\"#ctl00_cphMainContent_txt_ContactInfo_PhoneNumber\").value = 8008557654;";
-		js.executeScript(jScript);
+		String[] contactAndPaymentInfo = { "wardah", "AlMalki", "whitelight43@hotmail.com", "", "Address Line 1",
+				"Address Line 2", "11111", "city", "", "Wardah", "AlMalki", "1234567890543", "11111", "222" };
+		int indexNumb = 0;
+		List<WebElement> contactAndPaymentInfoEle = driver
+				.findElements(By.cssSelector("input[id*='ctl00_cphMainContent_txt']"));
+		for (WebElement eachInput : contactAndPaymentInfoEle) {
+			eachInput.sendKeys(contactAndPaymentInfo[indexNumb]);
+			indexNumb++;
+			js.executeScript("window.scrollBy(0,40)");
+			if (indexNumb == 3) {
+				String jScript = "document.querySelector(\"#ctl00_cphMainContent_txt_ContactInfo_PhoneNumber\").value = 8008557654;";
+				js.executeScript(jScript);
+			}
+			if (indexNumb == 8) {
+				String jScript = "document.querySelector(\"#ctl00_cphMainContent_txt_mobile_number\").value = 8008557654;";
+				js.executeScript(jScript);
+				Thread.sleep(1000);
+				Select stateEle = new Select(driver.findElement(By.id("ctl00_cphMainContent_ddl_ContactInfo_State")));
+				stateEle.selectByIndex(1);
+			}
+			if (indexNumb == 12) {
+				Select yearEle = new Select(driver.findElement(By.id("ctl00_cphMainContent_ddl_CC_ExpirationYear")));
+				yearEle.selectByIndex(3);
+				Thread.sleep(1000);
+				Select monthEle = new Select(driver.findElement(By.id("ctl00_cphMainContent_ddl_CC_ExpirationMonth")));
+				monthEle.selectByIndex(1);
+			}
+			if (indexNumb == 14) {
+				driver.findElement(
+						By.xpath("//label[contains(text(), 'I understand that the Legal Assist Plan automatically')]"))
+						.click();
+				break;
+			}
+			Thread.sleep(1000);
+		}
+		js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+		Thread.sleep(1000);
 
-		driver.findElement(By.id("ctl00_cphMainContent_txt_ContactInfo_Street1")).sendKeys("Address");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_ContactInfo_Street2")).sendKeys("Address2");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_ContactInfo_ZipCode")).sendKeys("11111");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_ContactInfo_City")).sendKeys("city");
-		Select stateEle = new Select(driver.findElement(By.id("ctl00_cphMainContent_ddl_ContactInfo_State")));
-		stateEle.selectByIndex(1);
-
-		driver.findElement(By.id("ctl00_cphMainContent_txt_PaymentInfo_FName")).sendKeys("wardah");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_PaymentInfo_LName")).sendKeys("almalki");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_CC_Number")).sendKeys("003344786543212345");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_CC_ZipCode")).sendKeys("11111");
-		driver.findElement(By.id("ctl00_cphMainContent_txt_CC_SecurityCode")).sendKeys("222");
-
-		Select monthEle = new Select(driver.findElement(By.id("ctl00_cphMainContent_ddl_CC_ExpirationMonth")));
-		monthEle.selectByIndex(1);
-
-		Select yearEle = new Select(driver.findElement(By.id("ctl00_cphMainContent_ddl_CC_ExpirationYear")));
-		yearEle.selectByIndex(2);
-
-		driver.findElement(
-				By.xpath("//label[contains(text(), 'I understand that the Legal Assist Plan automatically')]")).click();
 		driver.findElement(By.xpath("//*[@id=\"ctl00_cphMainContent_imgbtn_CheckOut\"]")).click();
+		Thread.sleep(1000);
 
 		WebElement spnEle = driver.findElement(By.id("ctl00_cphMainContent_cv_txt_CC_Number"));
+		js.executeScript("arguments[0].scrollIntoView();", spnEle);
+
 		String result = spnEle.getText();
 		Assert.assertEquals(result, "Invalid Credit Card Number");
 		System.out.println(result);
@@ -355,35 +399,5 @@ public class Legalzoom {
 	public void afterMethod() {
 		System.out.println("After Method");
 		driver.quit();
-	}
-
-	@BeforeClass
-	public void beforeClass() {
-		System.out.println("Before Class");
-	}
-
-	@AfterClass
-	public void afterClass() {
-		System.out.println("After Class");
-	}
-
-	@BeforeTest
-	public void beforeTest() {
-		System.out.println("Before Test");
-	}
-
-	@AfterTest
-	public void afterTest() {
-		System.out.println("After Test");
-	}
-
-	@BeforeSuite
-	public void beforeSuite() {
-		System.out.println("Before Suite");
-	}
-
-	@AfterSuite
-	public void afterSuite() {
-		System.out.println("After Suite");
 	}
 }
